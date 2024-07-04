@@ -1,0 +1,22 @@
+<div id="root">
+  {% if template.suffix == 'home-try-on-buy' %}
+  {% liquid
+    # Relative to entrypointsDir
+    render 'vite-tag' with 'theme.css'
+    render 'vite-tag' with 'theme.jsx'
+  %}
+  {% endif %}
+</div>
+
+<script>
+  const home = {{ request.path | json }}
+</script>
+
+{% schema %}
+{
+  "name": "Home Try On Questionaire",
+  "templates": ["page"],
+  "target": "body",
+  "settings": []
+}
+{% endschema %}

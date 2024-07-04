@@ -1,0 +1,26 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "product-try-on"
+client_id = "d8f817b76c8a15e477b4473459655f88"
+application_url = "https://parking-leader-night-carpet.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+
+[auth]
+redirect_urls = [
+  "https://parking-leader-night-carpet.trycloudflare.com/auth/callback",
+  "https://parking-leader-night-carpet.trycloudflare.com/auth/shopify/callback",
+  "https://parking-leader-night-carpet.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-60f5396d.myshopify.com"
